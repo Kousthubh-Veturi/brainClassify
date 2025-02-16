@@ -1,23 +1,16 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-import boto3
-import tensorflow as tf
-import numpy as np
-from io import BytesIO
-from PIL import Image
-import os
-from dotenv import load_dotenv
-from app.services.db_service import update_prediction
+from app.services.model_service import predict_tumor
 
-load_dotenv()
 router = APIRouter()
-AWS_KEYACCESS = os.getenv("AWS_ACCESS_KEY")
-AWS_KEYSECRET = os.getenv("AWS_SECRET_KEY")
-S3_BUCKET = os.getenv("S3_BUCKET")
 
-s3 = boto3.client("s3", aws_access_key_id=AWS_KEYACCESS, aws_secret_access_key=AWS_KEYSECRET)
+class PredictionRequest(BaseModel):
+    filename: str
 
-model = tf.keras.models.load_model("model.h5")
-
-
-
+@router.post("/")
+async def predict(request: PredictionRequest):
+    try:
+        prediction = predict_tumor(request.filename)
+        return {"filename": request.filename, "prediction": prediction}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
