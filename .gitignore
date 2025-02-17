@@ -3,3 +3,4 @@ venv
 __pycache__
 Screenshot 2025-02-16 at 1.56.24 AM.png
 model/data
+.gitignore
