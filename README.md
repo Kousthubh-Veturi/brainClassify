@@ -1,5 +1,5 @@
 # 🧠 Brain Tumor Classifier 🏥💡  
-🚀 **Personal Project by [Your Name]** | 🔬 **Deep Learning + Computer Vision**  
+🚀 **Personal Project by Kousthubh Veturi ** | 🔬 **Deep Learning and MLOps**  
 
 ---
 
