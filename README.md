@@ -30,8 +30,6 @@ This project is a **full-stack AI-powered web app** combining **deep learning, c
 
 ### 📦 **DevOps & Deployment**
 - 🐳 **Docker** (Containerization)  
-- ☸️ **Kubernetes** (Scaling & Auto-Deployment)  
-- ☁️ **AWS Lambda + S3** (Retraining pipeline)  
 
 ---
 
