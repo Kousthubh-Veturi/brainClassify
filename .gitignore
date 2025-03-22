@@ -1,6 +1,46 @@
-venv
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.log
+
+# Environment variables
 .env
-__pycache__
-Screenshot 2025-02-16 at 1.56.24 AM.png
-model/data
-.gitignore
+.env.*
+
+# Frontend
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage/
+frontend/build/
+frontend/.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Backend
+backend/__pycache__/
+backend/logs/
+backend/.DS_Store
+
+# Data and uploads
+uploads/
+feedback/
+model/data/
+
+# OS specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Screenshots
+Screenshot*.png
